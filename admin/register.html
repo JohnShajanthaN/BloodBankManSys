@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Blood Don</title>
+        <link rel="shortcut icon" href="../images/3.png">
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-light">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header bg-primary"><h3 class="text-center text-white font-weight-light my-2">Create Account</h3></div>
+                                    <div class="card-body">
+                                        <form method="post" action="#" name="user_form" id="user_form" autocomplete="off" >
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="small mb-1" for="inputFirstName">First Name</label>
+                                                        <input class="form-control py-4" id="firstname" type="text" placeholder="Enter first name" data-dj-validator="text, 1,20" required/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="small mb-1" for="inputLastName">Last Name</label>
+                                                        <input class="form-control py-4" id="lastname" type="text" placeholder="Enter last name" data-dj-validator="text, 1,20" required/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="inputEmailAddress">Email</label>
+                                                <input class="form-control py-4" id="email" type="email" aria-describedby="emailHelp" placeholder="Enter email address" data-dj-validator="email,*" required/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="small mb-1" >Phone</label>
+                                                <input class="form-control py-4" id="phone" type="number" placeholder="Enter phone nember" data-dj-validator="text, 10, 10" required/>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="small mb-1" for="inputPassword">Password</label>
+                                                        <input class="form-control py-4" id="password" type="password" placeholder="Enter password" data-dj-validator="text, 8,20" required  />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="small mb-1" for="inputConfirmPassword">Confirm Password</label>
+                                                        <input class="form-control py-4" id="confirmPassword" type="password" placeholder="Confirm password" data-dj-validator="equal,password,input password" required/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="small mb-1 mr-5" >Gender</label>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender" id="Male" value="Male" >
+                                                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                                                  </div>
+                                                  <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender" id="Female" value="Female" data-dj-validator="radio" required>
+                                                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                                                  </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="small mb-1" >Blood Group</label>
+                                                        <select class="custom-select " id="blood_group" name="blood_group" required>
+                                                            <option disabled selected>Select the Blood Group</option>
+                                                            <option value="A+">A+</option>
+                                                            <option value="A-">A-</option>
+                                                            <option value="B+">B+</option>
+                                                            <option value="B-">B-</option>
+                                                            <option value="AB+">AB+</option>
+                                                            <option value="AB-">AB-</option>
+                                                            <option value="O+">O+</option>
+                                                            <option value="O-">O-</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="small mb-1" for="inputLastName">Date of Birth</label>
+                                                      <input type="text" class="form-control py-4 datetimepicker-input" id="date_of_birth" data-toggle="datetimepicker" data-target="#date_of_birth" required/>
+                                                    </div>
+                                                    <!-- <div class="form-group">
+                                                        <label class="small mb-1" for="inputLastName">Date of Birth</label>
+                                                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+                                                            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                                              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                            </div>
+                                                          </div>
+                                                        
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                            
+                                            
+
+                                            <div class="form-group">
+                                                <label class="small mb-1" >Address</label>
+                                                <textarea class="form-control py-4" id="address" placeholder="Enter Address" data-dj-validator="text, 1, 100" required></textarea>
+                                            </div>
+
+                                            
+
+                                            
+
+                                            <div class="form-group mt-4 mb-0">
+                                                <!-- <a class="btn btn-primary btn-block" href="login.html">Create Account</a> -->
+                                                <input  type="button" class="btn btn-primary btn-block" id="subBtnId" value="Create Account"></input>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <div class="small"><a href="login.html">Have an account? Go to login</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+        <script src="js/scripts.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/DjValidator.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
+        
+        <script src="js/scripts.js"></script>
+        <script>
+            $(function() {
+                
+                // var maxdate = new Date().getFullYear() + "/"+ new Date().getMonth() +"/"+new Date().getDate() ; 
+                // console.log(new Date().getMonth());
+
+                $('#date_of_birth').datetimepicker({
+                    // 'format': 'L',
+                    format: 'YYYY-MM-DD',
+                    defaultDate: moment().format(),
+                    viewMode: 'years',
+                    maxDate: moment().format(),
+                });
+
+                $('user_form').djValidator({mode:'blur'});
+                //cambiar modo de validación a function de forma global
+                $.fn.djValidator.props.mode='function';
+                
+                $('#subBtnId').click(function(){ 
+                    result=$('#user_form').djValidator();
+                    if(result){
+                        // console.log($('#firstname').val());
+                        // console.log($('#email').val());
+                        // console.log($('#phone').val());
+                        // console.log($('#address').val());
+                        // console.log($('#role').val());
+                        // console.log($('#blood_group').val());
+                        // console.log($('#date_of_birth').val());
+                        // console.log($('input[name=gender]:checked').val());
+                        // console.log($('#password').val());
+
+                        var data = {
+                            firstname: $('#firstname').val(),
+                            lastname: $('#lastname').val(),
+                            email: $('#email').val(),
+                            phone: $('#phone').val(),
+                            address: $('#address').val(),
+                            password: $('#password').val(),
+                            blood_group: $('#blood_group').val(),
+                            date_of_birth: $('#date_of_birth').val(),
+                            role: 'donor',
+                            gender: $('input[name=gender]:checked').val(),
+                        };
+
+                        $.ajax({
+                            type: "POST",
+                            url: "api/user/create.php",
+                            contentType: "application/json",
+                            data: JSON.stringify(data),
+                            dataType: 'json',		
+                            success: function(data) {	
+                                if(data.status == 200){
+                                    $.confirm({
+                                        title: 'Success',
+                                        backgroundDismiss: false, 
+                                        content: 'New User was created.',
+                                        buttons: {
+                                            confirm: function () {
+                                                location.reload(true);
+                                            }
+                                        }
+                                    });
+                                } else {
+                                    $.alert({
+                                        title: 'Information',
+                                        content: 'Unable to create user. Try again later.',
+                                    });
+                                }
+                            },
+                            error: function(data) {
+                                if(data.responseJSON.error.indexOf("InternalError") > -1) {
+                                    notif({msg: data.responseJSON.message, type: "error"});
+                                }
+                            }
+                        });
+
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
